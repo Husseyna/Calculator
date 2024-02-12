@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap');
+
+
+/* .attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); } */
+:root{
+--Very-dark-desaturated-blue-main: hsl(222, 26%, 31%);
+--toggle-keypad-background: hsl(223, 31%, 20%);
+--screen-background: hsl(224, 36%, 15%);
+--key-background: hsl(225, 21%, 49%);
+--key-shadow: hsl(224, 28%, 35%);
+--key-toggle-background: hsl(6, 63%, 50%);
+--Dark-red-key-shadow: hsl(6, 70%, 34%);
+--light-grayish-key-background: hsl(30, 25%, 89%);
+--Grayish-orange-key-shadow: hsl(28, 16%, 65%);
+--Very-dark-grayish-blue: hsl(221, 14%, 31%);
+--White: hsl(0, 0%, 100%);
+--Light-gray-main-background: hsl(0, 0%, 90%);
+--Grayish-red-toggle-keypad-background: hsl(0, 5%, 81%);
+--Very-light-gray-screen-background: hsl(0, 0%, 93%);
+--Dark-moderate-key-background: hsl(185, 42%, 37%);
+--Very-dark-key-shadow: hsl(185, 58%, 25%);
+--Orange-key-toggle: hsl(25, 98%, 40%);
+--Dark-orange-key-shadow: hsl(25, 99%, 27%);
+--Light-grayish-yellow-key-background: hsl(45, 7%, 89%);
+--Dark-grayish-orange-key-shadow: hsl(35, 11%, 61%)
+--Very-dark-grayish-yellow: hsl(60, 10%, 19%);
+--White: hsl(0, 0%, 100%);
+--Very-dark-violet-main: hsl(268, 75%, 9%);
+--Very-dark-violet-toggle-keypad-screen-background: hsl(268, 71%, 12%);
+--Dark-violet-key-background: hsl(281, 89%, 26%);
+--Vivid-magenta-key-shadow: hsl(285, 91%, 52%);
+--Pure-key-toggle-background: hsl(176, 100%, 44%);
+--Soft-key-shadow: hsl(177, 92%, 70%);
+--very-dark-violet-key-background: hsl(268, 47%, 21%);
+--Dark-magenta-key-shadow: hsl(290, 70%, 36%);
+--Light-yellow: hsl(52, 100%, 62%);
+--very-dark-blue: hsl(198, 20%, 13%);
+--White-text: hsl(0, 0%, 100%);
+
+
+}
+*{
+   padding: 0;
+   margin: 0;
+   box-sizing: border-box;
+   font-family: 'Spartan', sans-serif;
+}
+body{
+   background-color: var(--Very-dark-desaturated-blue-main);
+   display: flex;
+   width: 100%;
+   max-width: 1440px;
+   align-items: center;
+   justify-content: center;
+   height: 100vh;
+   flex-direction: column;
+}
+body.active1{
+   background-color: var(--key-background);
+}
+body.active2{
+   background-color: var(--Very-dark-desaturated-blue-main);
+}
+body.active3{
+   background-color: var(--Dark-orange-key-shadow);
+}
+.toggle{
+   display: flex;
+   justify-content: space-between;
+}
+.right{
+   display: flex;
+   justify-content: flex-end;
+}
+.toggle p{
+   margin: 0 5px;
+   color: var(--Dark-orange-key-shadow);
+   cursor: pointer;
+}
+h3{
+   color: var(--Dark-violet-key-background);
+}
+.control p{
+   float: right;
+   margin-right: 100px;
+   color: var(--Dark-moderate-key-background);
+   position: relative;
+   cursor: pointer;
+}
+.control p::after{
+   content: '';
+   position: absolute;
+   width: 60px;
+   height: 13px;
+   background-color: var(--Dark-magenta-key-shadow);
+   top: 0;
+   right: -100px;
+   border-radius: 30px;
+}
+.control p::before{
+   content: '';
+   position: absolute;
+   width: 11px;
+   height: 11px;
+   background-color: var(--Pure-key-toggle-background);
+   top: 1;
+   right: -52px;
+   border-radius: 30px;
+   z-index: 1;
+}
+.screen{
+   width: 450px;
+}
+#screen{
+   width: 100%;
+   height: 100px;
+   margin: 10px 0;
+   text-align: right;
+   font-size: 32px;
+   background-color: var(--Dark-orange-key-shadow);
+   color: var(--Very-dark-grayish-blue);
+   border: 0;
+   outline: none;
+}
+button{
+   width: 90px;
+   padding: 15px;
+   outline: none;
+   cursor: pointer;
+   border: 0;
+   border-radius: 5px;
+   box-shadow: var(--Dark-magenta-key-shadow);
+   margin: 10px 10px;
+   font-size: 32px;
+}
+.btn{
+   display: flex;
+   width: 450px;
+   flex-flow: wrap;
+   background-color: var(--Dark-moderate-key-background);
+   padding: 10px 5px;
+   margin: 15px 0;
+}
+.reset, .del{
+   background-color: var(--Grayish-red-toggle-keypad-background);
+   box-shadow: var(--Dark-magenta-key-shadow);
+   color: var(--Dark-orange-key-shadow);
+   font-size: 16px;
+}
+.equal{
+   background-color: var(--Dark-red-key-shadow);
+   box-shadow: var(--Dark-magenta-key-shadow);
+}
+.reset, .equal{
+   width: 200px;
+   color: var(--key-toggle-background);
+}
+.num{
+   font-size: 32px;
+}
