@@ -1,8 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap');
-
-
-/* .attribution { font-size: 11px; text-align: center; }
-.attribution a { color: hsl(228, 45%, 44%); } */
+/* .attribution { font-size: 11px; text-align: center; } .attribution a { color: hsl(228, 45%, 44%); } */
 :root{
 --Very-dark-desaturated-blue-main: hsl(222, 26%, 31%);
 --toggle-keypad-background: hsl(223, 31%, 20%);
@@ -37,14 +34,13 @@
 --Light-yellow: hsl(52, 100%, 62%);
 --very-dark-blue: hsl(198, 20%, 13%);
 --White-text: hsl(0, 0%, 100%);
-
-
 }
 *{
    padding: 0;
    margin: 0;
    box-sizing: border-box;
    font-family: 'Spartan', sans-serif;
+   font-weight: 700;
 }
 body{
    background-color: var(--Very-dark-desaturated-blue-main);
@@ -57,13 +53,22 @@ body{
    flex-direction: column;
 }
 body.active1{
-   background-color: var(--key-background);
+   background-color: var(--very-dark-violet-key-background);
+}
+body active1 .btn{
+  background-color: var(--Very-dark-violet-main);
 }
 body.active2{
-   background-color: var(--Very-dark-desaturated-blue-main);
+   background-color: var(--Dark-moderate-key-background);
 }
-body.active3{
-   background-color: var(--Dark-orange-key-shadow);
+body.active  #screen{
+   background-color: var(--Dark-violet-key-background);
+}
+body.active h3{
+   color: var(--very-dark-violet-key-background);
+}
+body.active .control p{
+  color: var(--Dark-violet-key-background);
 }
 .toggle{
    display: flex;
@@ -75,17 +80,37 @@ body.active3{
 }
 .toggle p{
    margin: 0 5px;
-   color: var(--Dark-orange-key-shadow);
+   color: var(--White-text);
    cursor: pointer;
 }
 h3{
-   color: var(--Dark-violet-key-background);
+   color: var(--White-text);
+}
+.control{
+   display: flex;
+   justify-content: flex-end;
+}
+.control .box{
+  width: 60px;
+  height: 15px;
+  background-color: var(--screen-background);
+  border-radius: 30px;
+  position: relative;
+  margin-left: 4px;
+}
+.control #circle{
+  width: 20px;
+  height: 15px;
+  background-color: var(--Orange-key-toggle);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  border-radius: 30px;
 }
 .control p{
-   float: right;
-   margin-right: 100px;
-   color: var(--Dark-moderate-key-background);
-   position: relative;
+   margin-right: 4px;
+   color: var(--White);
    cursor: pointer;
 }
 .control p::after{
@@ -93,7 +118,7 @@ h3{
    position: absolute;
    width: 60px;
    height: 13px;
-   background-color: var(--Dark-magenta-key-shadow);
+   background-color: var(--toggle-keypad-background);
    top: 0;
    right: -100px;
    border-radius: 30px;
@@ -103,7 +128,7 @@ h3{
    position: absolute;
    width: 11px;
    height: 11px;
-   background-color: var(--Pure-key-toggle-background);
+   background-color: var(--Orange-key-toggle);
    top: 1;
    right: -52px;
    border-radius: 30px;
@@ -118,8 +143,8 @@ h3{
    margin: 10px 0;
    text-align: right;
    font-size: 32px;
-   background-color: var(--Dark-orange-key-shadow);
-   color: var(--Very-dark-grayish-blue);
+   background-color: var(--screen-background);
+   color: var(--White);
    border: 0;
    outline: none;
 }
@@ -138,14 +163,14 @@ button{
    display: flex;
    width: 450px;
    flex-flow: wrap;
-   background-color: var(--Dark-moderate-key-background);
+   background-color: var(--screen-background);
    padding: 10px 5px;
    margin: 15px 0;
 }
 .reset, .del{
-   background-color: var(--Grayish-red-toggle-keypad-background);
+   background-color: var(--key-background);
    box-shadow: var(--Dark-magenta-key-shadow);
-   color: var(--Dark-orange-key-shadow);
+   color: var(--White-text);
    font-size: 16px;
 }
 .equal{
@@ -154,7 +179,7 @@ button{
 }
 .reset, .equal{
    width: 200px;
-   color: var(--key-toggle-background);
+   color: var(--White-text);
 }
 .num{
    font-size: 32px;
